@@ -25,8 +25,7 @@ const ENDPOINT_URL = 'https://ssp.theadx.com/request';
 const ENDPOINT_TR_URL = 'https://ssptr.theadx.com/request';
 
 const NATIVEASSETNAMES = {
-  0: 'title',
-  1: 'cta',
+  1: 'title',
   2: 'icon',
   3: 'image',
   4: 'body',
@@ -37,15 +36,15 @@ const NATIVEASSETNAMES = {
   9: 'displayurl',
   10: 'rating',
   11: 'address',
-  12: 'downloads',
-  13: 'likes',
-  14: 'price',
-  15: 'saleprice',
-
+  12: 'cta', // Changed from 1 to 12 to avoid conflict with Title
+  13: 'downloads',
+  14: 'likes',
+  15: 'price',
+  16: 'saleprice',
 };
 const NATIVEPROBS = {
   title: {
-    id: 0,
+    id: 1, // Standard OpenRTB ID for Title
     name: 'title'
   },
   body: {
@@ -84,7 +83,7 @@ const NATIVEPROBS = {
     type: 11
   },
   cta: {
-    id: 1,
+    id: 12, // Changed to 12
     type: 12,
     name: 'data'
   },
